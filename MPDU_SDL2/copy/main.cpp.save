@@ -1,0 +1,162 @@
+#include <iostream>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include "button.h"
+#include "texturemngr.h"
+
+using namespace std;
+
+
+int main()
+{
+    if (SDL_Init(SDL_INIT_EVERYTHING) != 0){
+        std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
+        return 1;
+    }
+
+    //SDL_DisplayMode displayMode;
+    //int request = SDL_GetDesktopDisplayMode(0,&displayMode);
+    SDL_Window *win = SDL_CreateWindow("MPDU!", 0,0,320,240,SDL_WINDOW_SHOWN);
+    if(win == nullptr)
+    {
+        std::cout<< "SDL_CreateWindow Error: "<< SDL_GetError() << std::endl;
+        return 1;
+    }
+
+    SDL_Renderer *ren = SDL_CreateRenderer(win, -1,
+             SDL_RENDERER_SOFTWARE );
+    if(ren == nullptr){
+        std::cout << "SDL_CreateRendere Error" << SDL_GetError() << std::endl;
+        return 1;
+    }
+    
+    SDL_SetRenderDrawColor(ren,255,0,0,255);
+    //SDL_RenderDrawLine(ren,0,0,100,100);
+    SDL_Rect a{0,0,320,240};
+    SDL_RenderFillRect(ren,&a);
+
+      TextureMngr::Instance()->Load(ren,"image/home/background.png","background");
+    TextureMngr::Instance()->Load(ren,"image/home/call.png","call");
+    TextureMngr::Instance()->Load(ren,"image/home/irs.png","irs");
+    TextureMngr::Instance()->Load(ren,"image/home/shades.png","shades");
+    TextureMngr::Instance()->Load(ren,"image/home/lights.png","lights");
+    TextureMngr::Instance()->Load(ren,"image/home/RUENG.png","rueng");
+    TextureMngr::Instance()->Load(ren,"image/home/call_on.png","call_on");
+    TextureMngr::Instance()->Load(ren,"image/home/irs_on.png","irs_on");
+    TextureMngr::Instance()->Load(ren,"image/home/shades_on.png","shades_on");
+    TextureMngr::Instance()->Load(ren,"image/home/lights_on.png","lights_on");
+    TextureMngr::Instance()->Load(ren,"image/home/RUENG_on.png","rueng_on");
+//    TextureMngr::Instance()->Load(ren,"image/home/reset_button.png","reset");
+//    TextureMngr::Instance()->Load(ren,"image/home/bottom_panel1.png","panel1");
+//    TextureMngr::Instance()->Load(ren,"image/home/bottom_panel2.png","panel2");
+//    TextureMngr::Instance()->Load(ren,"image/home/bottom_panel3.png","panel3");
+//    TextureMngr::Instance()->Load(ren,"image/home/home_button.png","home_button");
+//    TextureMngr::Instance()->Load(ren,"image/home/PANEL.png","topPanel");
+//    TextureMngr::Instance()->Load(ren,"image/home/home_picture.png","home_picture");
+    //So many load( need
+    SDL_RenderClear(ren);
+    //header
+    SDL_Event event;
+
+    Element background(0,0,320,240,"background");
+    Element topPanel(0,0,320,15,"topPanel");
+    Element home_picture(0,0,30,15,"home_picture");
+
+    Button call(40,20,230,35,"call","call_on");
+    Button lights(40,60,230,35,"lights","lights_on");
+    Button shades(40,100,230,35,"shades","shades_on");
+    Button irs(40,140,230,35,"irs","irs_on");
+    Button rueng(90,180,120,25,"rueng","rueng_on");
+
+    Element reset(0,210,70,30,"reset");
+    Element panel1(71,213,60,27,"panel1");
+    Element panel2(131,213,60,27,"panel2");
+    Element panel3(191,213,60,27,"panel3");
+    Element home_button(252,210,70,30,"home_button");
+
+    bool quit = false;
+
+    while(!quit)
+    {
+        printf("Drawing home default\n");
+        TextureMngr::Instance()->Draw(&background,ren,nullptr);
+        TextureMngr::Instance()->Draw(&topPanel,ren,nullptr);
+        TextureMngr::Instance()->Draw(&home_picture,ren,nullptr);
+
+        TextureMngr::Instance()->Draw(&call,ren,nullptr);
+        TextureMngr::Instance()->Draw(&lights,ren,nullptr);
+        TextureMngr::Instance()->Draw(&shades,ren,nullptr);
+        TextureMngr::Instance()->Draw(&irs,ren,nullptr);
+        TextureMngr::Instance()->Draw(&rueng,ren,nullptr);
+
+        TextureMngr::Instance()->Draw(&reset,ren,nullptr);
+        TextureMngr::Instance()->Draw(&panel1,ren,nullptr);
+        TextureMngr::Instance()->Draw(&panel2,ren,nullptr);
+        TextureMngr::Instance()->Draw(&panel3,ren,nullptr);
+        TextureMngr::Instance()->Draw(&home_button,ren,nullptr);
+        //Draw(back_rect, back,ren);
+//        Draw(0,0,320,15,panel,ren);
+//        Draw(0,0,30,15,home_picture,ren);
+//        Draw(40,20,230,35,call,ren);
+//        Draw(40,60,230,35,lights,ren);
+//        Draw(40,100,230,35,shades,ren);
+//        Draw(40,140,230,35,irs,ren);
+//        Draw(90,180,120,25,rueng,ren);
+//        //footer
+//        Draw(0,210,70,30,reset,ren);
+//        Draw(71,213,60,27,botpanel1,ren);
+//        Draw(131,213,60,27,botpanel2,ren);
+//        Draw(191,213,60,27,botpanel3,ren);
+//        Draw(252,210,70,30,home_panel,ren);
+        //Draw()
+        SDL_RenderPresent(ren);
+        SDL_Delay(1);
+
+        Uint32 state = SDL_GetMouseState(NULL,NULL);
+
+        bool buttonState = false;
+        bool released = false;
+
+//        while(SDL_PollEvent(&event) )
+//        {
+//            SDL_PumpEvents();
+//            switch(event.type)
+//            {
+//            case SDL_QUIT:
+//                released = true;
+//                quit = true;
+//                break;
+//             case SDL_MOUSEBUTTONDOWN:
+//               printf("button pressed\n");
+//               if(is_in(event.button,call_rect))
+//               {
+//                    released = false;
+//                    Draw(call_rect,call_on,ren);
+//                    SDL_RenderPresent(ren);
+//                    SDL_Delay(200);
+//                    //break;
+//               }
+
+//            case SDL_MOUSEBUTTONUP:
+//                released = true;
+//                printf("button call up\n");
+//                //break;
+//            }
+
+//        }
+    }
+
+
+
+        //delete window render
+        SDL_DestroyRenderer(ren);
+        SDL_DestroyWindow(win);
+        //SDL_BlitSurface
+        SDL_Quit();
+
+        return 0;
+}
+
+
+
+

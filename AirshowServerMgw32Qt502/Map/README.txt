@@ -1,0 +1,1 @@
+This folder contains converted jpeg images. Source images folder can be set in map.conf.

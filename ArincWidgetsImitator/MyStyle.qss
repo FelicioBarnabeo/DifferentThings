@@ -1,0 +1,11 @@
+QCheckBox::indicator
+{
+    witdh: 30px;
+    heigth: 30px;
+    color: red;
+}
+
+QLabel
+{
+color: red;
+}

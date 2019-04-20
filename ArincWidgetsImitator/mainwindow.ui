@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>806</width>
+    <height>762</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>851</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Геоданные</string>
+    </property>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>781</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <widget class="QWidget" name="tabWidgetPage1">
+      <attribute name="title">
+       <string/>
+      </attribute>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>9</y>
+         <width>127</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Наименование</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>153</x>
+         <y>9</y>
+         <width>83</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>От</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>426</x>
+         <y>9</y>
+         <width>42</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Знак</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_23">
+       <property name="geometry">
+        <rect>
+         <x>537</x>
+         <y>9</y>
+         <width>90</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Состояние</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_24">
+       <property name="geometry">
+        <rect>
+         <x>689</x>
+         <y>9</y>
+         <width>79</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Чётность</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Long">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>37</y>
+         <width>53</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Долгота</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="LongVal">
+       <property name="geometry">
+        <rect>
+         <x>153</x>
+         <y>39</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>50</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="SignLng">
+       <property name="geometry">
+        <rect>
+         <x>426</x>
+         <y>39</y>
+         <width>94</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Восточная</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Западная</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="StatusLng">
+       <property name="geometry">
+        <rect>
+         <x>537</x>
+         <y>39</y>
+         <width>106</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Нормальное</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Нет данных</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Тест</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Отказ</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QCheckBox" name="parityLng">
+       <property name="geometry">
+        <rect>
+         <x>689</x>
+         <y>37</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Lat">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>75</y>
+         <width>50</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Широта</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="LatVal">
+       <property name="geometry">
+        <rect>
+         <x>153</x>
+         <y>78</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>256</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>60</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="SignLat">
+       <property name="geometry">
+        <rect>
+         <x>426</x>
+         <y>78</y>
+         <width>89</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Северная</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Южная</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="StatusLat">
+       <property name="geometry">
+        <rect>
+         <x>537</x>
+         <y>78</y>
+         <width>106</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Нормальное</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Нет данных</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Тест</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Отказ</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QCheckBox" name="parityLat">
+       <property name="geometry">
+        <rect>
+         <x>689</x>
+         <y>75</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Alt">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>114</y>
+         <width>46</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Высота</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="AltVal">
+       <property name="geometry">
+        <rect>
+         <x>153</x>
+         <y>116</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>8000</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="SignAlt">
+       <property name="geometry">
+        <rect>
+         <x>426</x>
+         <y>116</y>
+         <width>68</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Плюс</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Минус</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="StatusAlt">
+       <property name="geometry">
+        <rect>
+         <x>537</x>
+         <y>116</y>
+         <width>106</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Нормальное</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Нет данных</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Тест</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Отказ</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QCheckBox" name="parityAlt">
+       <property name="geometry">
+        <rect>
+         <x>689</x>
+         <y>114</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Dist">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>152</y>
+         <width>124</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Расстояние до КПМ</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="DistVal">
+       <property name="geometry">
+        <rect>
+         <x>153</x>
+         <y>155</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>500</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="StatusDist">
+       <property name="geometry">
+        <rect>
+         <x>537</x>
+         <y>155</y>
+         <width>106</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Нормальное</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Нет данных</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Тест</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Отказ</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QCheckBox" name="parityDist">
+       <property name="geometry">
+        <rect>
+         <x>689</x>
+         <y>152</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="TimeToDest">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>191</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Время до КПМ</string>
+       </property>
+      </widget>
+      <widget class="QTimeEdit" name="TimeToDestVal">
+       <property name="geometry">
+        <rect>
+         <x>153</x>
+         <y>193</y>
+         <width>81</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="time">
+        <time>
+         <hour>2</hour>
+         <minute>31</minute>
+         <second>0</second>
+        </time>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="statusTimeToDest">
+       <property name="geometry">
+        <rect>
+         <x>537</x>
+         <y>193</y>
+         <width>106</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Нормальное</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Нет данных</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Тест</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Отказ</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QCheckBox" name="parityTimeToDest">
+       <property name="geometry">
+        <rect>
+         <x>689</x>
+         <y>191</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Speed">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>229</y>
+         <width>59</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Скорость</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="SpeedVal">
+       <property name="geometry">
+        <rect>
+         <x>153</x>
+         <y>232</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>500</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="StatusSpeed">
+       <property name="geometry">
+        <rect>
+         <x>537</x>
+         <y>232</y>
+         <width>106</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Нормальное</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Нет данных</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Тест</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Отказ</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QCheckBox" name="paritySpeed">
+       <property name="geometry">
+        <rect>
+         <x>689</x>
+         <y>229</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Time">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>268</y>
+         <width>98</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Текущее время</string>
+       </property>
+      </widget>
+      <widget class="QTimeEdit" name="TimeVal">
+       <property name="geometry">
+        <rect>
+         <x>153</x>
+         <y>270</y>
+         <width>81</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="time">
+        <time>
+         <hour>3</hour>
+         <minute>2</minute>
+         <second>20</second>
+        </time>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="StatusTime">
+       <property name="geometry">
+        <rect>
+         <x>537</x>
+         <y>270</y>
+         <width>106</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Нормальное</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Нет данных</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Тест</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Отказ</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QCheckBox" name="parityTime">
+       <property name="geometry">
+        <rect>
+         <x>689</x>
+         <y>268</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Temp">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>306</y>
+         <width>83</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Температура</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="TempVal">
+       <property name="geometry">
+        <rect>
+         <x>153</x>
+         <y>308</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="StatusTemp">
+       <property name="geometry">
+        <rect>
+         <x>537</x>
+         <y>308</y>
+         <width>106</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Нормальное</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Нет данных</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Тест</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Отказ</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QCheckBox" name="parityTemp">
+       <property name="geometry">
+        <rect>
+         <x>689</x>
+         <y>306</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Date">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>344</y>
+         <width>32</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Дата</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="DateVal">
+       <property name="geometry">
+        <rect>
+         <x>153</x>
+         <y>346</y>
+         <width>85</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="dateTime">
+        <datetime>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+         <year>2017</year>
+         <month>6</month>
+         <day>4</day>
+        </datetime>
+       </property>
+       <property name="date">
+        <date>
+         <year>2017</year>
+         <month>6</month>
+         <day>4</day>
+        </date>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="SignTemp">
+       <property name="geometry">
+        <rect>
+         <x>426</x>
+         <y>347</y>
+         <width>68</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Плюс</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Минус</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="StatusDate">
+       <property name="geometry">
+        <rect>
+         <x>537</x>
+         <y>347</y>
+         <width>135</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Нормальное</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Нет данных</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Тест</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Не используется</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QCheckBox" name="parityDate">
+       <property name="geometry">
+        <rect>
+         <x>689</x>
+         <y>344</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>10</y>
+         <width>59</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>До</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>30</y>
+         <width>101</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="text">
+           <string>10</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_2">
+          <property name="text">
+           <string>20</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_3">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_4">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTimeEdit" name="timeEdit"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_6">
+          <property name="text">
+           <string>900</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTimeEdit" name="timeEdit_2">
+          <property name="dateTime">
+           <datetime>
+            <hour>10</hour>
+            <minute>20</minute>
+            <second>0</second>
+            <year>2000</year>
+            <month>1</month>
+            <day>1</day>
+           </datetime>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_8">
+          <property name="text">
+           <string>-20</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateEdit">
+          <property name="dateTime">
+           <datetime>
+            <hour>0</hour>
+            <minute>0</minute>
+            <second>0</second>
+            <year>2017</year>
+            <month>6</month>
+            <day>5</day>
+           </datetime>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>490</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Запустить</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>806</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="openFile"/>
+    <addaction name="fileSave"/>
+    <addaction name="fileSaveAs"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="fileSave">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="fileSaveAs">
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+  </action>
+  <action name="openFile">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

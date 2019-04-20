@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ChooseLanguage.qml</file>
+        <file>CircleButton.qml</file>
+        <file>DecorLight.qml</file>
+        <file>DownBar.qml</file>
+        <file>IconButton.qml</file>
+        <file>Irs.qml</file>
+        <file>Ligth.qml</file>
+        <file>main.qml</file>
+        <file>MenuButton.qml</file>
+        <file>Multimedia.qml</file>
+        <file>Player.qml</file>
+        <file>PlayerButton.qml</file>
+        <file>Shades.qml</file>
+        <file>Style.qml</file>
+        <file>TopBar.qml</file>
+        <file>Zones.qml</file>
+        <file>qmldir</file>
+        <file>font/ionicons.ttf</file>
+        <file>translations/en.qm</file>
+        <file>translations/en.ts</file>
+        <file>translations/ru.qm</file>
+        <file>translations/ru.ts</file>
+        <file>Battery.qml</file>
+        <file>images/battery/battery2.png</file>
+        <file>images/battery/battery_bar.png</file>
+        <file>images/whiteShades.png</file>
+        <file>images/rss-6x.png</file>
+        <file>images/playpause.png</file>
+        <file>font/roboto.ttf</file>
+        <file>font/DejaVuSans.ttf</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>handle_pressed.png</file>
+        <file>handle_inactive.png</file>
+        <file>ColorSlider.qml</file>
+        <file>circle.png</file>
+        <file>qmldir</file>
+        <file>fullcircle.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>handle_inactive.png</file>
+        <file>handle_pressed.png</file>
+        <file>circle.png</file>
+        <file>fullcircle.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,74 @@
+#include "centralwidget.h"
+#include <QWidget>
+#include <QLabel>
+#include <QComboBox>
+#include <QBoxLayout>
+#include <QPushButton>
+#include <QTextEdit>
+#include <QGroupBox>
+#include "commandwidget.h"
+#include "mytabledelegate.h"
+#include "mainwindow.h"
+#include "ioserialmanager.h"
+#include <QDateTime>
+#include <QTextCursor>
+#include <QDebug>
+#include "mytextedit.h"
+
+CentralWidget::CentralWidget(QWidget *parent):
+      QWidget(parent)
+    , m_messageViewer(new MyTextEdit(this))
+    , m_cmdWidget(new CommandWidget(this))
+    , m_ioMngr(IOSerialManager::instance())
+    , m_mainLayout(new QHBoxLayout(this))
+    , m_subMainLayout(new QVBoxLayout(this))
+    , m_sub2mainLayout(new QVBoxLayout(this))
+{
+
+    m_subMainLayout->addWidget(m_messageViewer);
+    m_mainLayout->addLayout(m_subMainLayout,4);
+    m_sub2mainLayout->addWidget(m_cmdWidget);
+    m_mainLayout->addLayout(m_sub2mainLayout,1);
+    setLayout(m_mainLayout);
+
+    connect(m_cmdWidget, &CommandWidget::sendStarted , m_ioMngr, &IOSerialManager::sendMessage);
+    connect(m_ioMngr, &IOSerialManager::bytesWrited, m_messageViewer, &MyTextEdit::wrBytesToShow);
+    connect(m_ioMngr, &IOSerialManager::bytesReaded, m_messageViewer, &MyTextEdit::rBytesToShow);
+}
+
+CentralWidget::~CentralWidget()
+{
+    delete m_sub2mainLayout;
+    delete m_subMainLayout;
+    delete m_mainLayout;
+    delete m_ioMngr;
+    delete m_cmdWidget;
+    delete m_messageViewer;
+}
+
+
+void CentralWidget::setValidator(MyValidator::ValidateType type)
+{
+    m_messageViewer->setValidatorType(type);
+}
+
+void CentralWidget::clearAll()
+{
+    m_messageViewer->clearAll();
+    m_cmdWidget->clear();
+}
+
+void CentralWidget::write(QJsonObject &json) const
+{
+    m_messageViewer->write(json);
+    m_cmdWidget->write(json);
+}
+
+void CentralWidget::read(QJsonObject &json)
+{
+    m_messageViewer->read(json);
+    m_cmdWidget->read(json);
+}
+
+
+

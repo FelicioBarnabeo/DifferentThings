@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/bg.png</file>
+        <file>qml/main.qml</file>
+        <file>qml/MainMenu.qml</file>
+        <file>fonts/awe.ttf</file>
+        <file>fonts/roboto.ttf</file>
+        <file>qml/TopBar.qml</file>
+        <file>qml/SimpleView.qml</file>
+        <file>qml/Audio.qml</file>
+        <file>qml/AudioPlayerControl.qml</file>
+        <file>qml/NaviBar.qml</file>
+        <file>qml/Label.qml</file>
+        <file>qml/Video.qml</file>
+        <file>qml/Button.qml</file>
+        <file>qml/VideoPlayer.qml</file>
+        <file>qml/VideoPlayerControl.qml</file>
+        <file>qml/VNaviBar.qml</file>
+        <file>qml/Info.qml</file>
+        <file>qml/Game.qml</file>
+        <file>qml/Settings.qml</file>
+        <file>qml/ToogleButton.qml</file>
+        <file>qml/Auth.qml</file>
+        <file>qml/AuthButton.qml</file>
+        <file>fonts/lcd.ttf</file>
+        <file>qml/Root.qml</file>
+        <file>qml/Help.qml</file>
+        <file>qml/Camcorder.qml</file>
+        <file>translations/en.qm</file>
+        <file>translations/ru.qm</file>
+        <file>qml/Note.qml</file>
+        <file>qml/Airshow.qml</file>
+        <file>qml/VKey.qml</file>
+        <file>qml/VKeyboard.qml</file>
+        <file>qml/RootModel.qml</file>
+        <file>app.qml</file>
+        <file>qml/app.qml</file>
+        <file>images/splash.jpg</file>
+    </qresource>
+</RCC>

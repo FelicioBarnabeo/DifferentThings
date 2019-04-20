@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Meter.qml</file>
+        <file>Exo2.0-Medium.otf</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>std.png</file>
+        <file>arrow.png</file>
+        <file>temp.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,39 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ChooseLanguage.qml</file>
+        <file>BaseMenu.qml</file>
+        <file>TopBar.qml</file>
+        <file>Style.qml</file>
+        <file>Shades.qml</file>
+        <file>PlayerButton.qml</file>
+        <file>Player.qml</file>
+        <file>Multimedia.qml</file>
+        <file>MenuButton.qml</file>
+        <file>main.cpp</file>
+        <file>Ligth.qml</file>
+        <file>Irs.qml</file>
+        <file>IconButton.qml</file>
+        <file>DecorLight.qml</file>
+        <file>qmldir</file>
+        <file>font/ionicons.ttf</file>
+        <file>images/whiteShades.png</file>
+        <file>translations/en.qm</file>
+        <file>translations/en.ts</file>
+        <file>translations/ru.qm</file>
+        <file>translations/ru.ts</file>
+        <file>ColorWheel.qml</file>
+        <file>images/ColorWheel/handle_pressed.png</file>
+        <file>images/ColorWheel/handle_inactive.png</file>
+        <file>images/ColorWheel/circle.png</file>
+        <file>ToggleButton.qml</file>
+        <file>VolumeIndicator.qml</file>
+        <file>LightSwitch.qml</file>
+        <file>Volume.qml</file>
+        <file>Configuration.qml</file>
+        <file>Brightness.qml</file>
+        <file>ChooseBrgt.qml</file>
+        <file>font/DejaVuSans.ttf</file>
+        <file>font/roboto.ttf</file>
+    </qresource>
+</RCC>
